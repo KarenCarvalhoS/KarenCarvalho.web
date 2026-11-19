@@ -2,23 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ===== TONS DA PÁGINA =====
+   Claro: creme + verde musgo. Escuro: verde oliva da identidade + creme.
+   Valores em "R G B". Para mudar o creme ou o verde de fundo, edite --page. */
+:root {
+  --page: 237 227 205;      /* creme (mais escuro que o original #FAF6EE) */
+  --surface: 249 244 234;   /* cartões */
+  --panel: 225 214 188;     /* painéis de apoio (areia) */
+  --ink: 63 74 31;          /* texto principal: verde musgo */
+  --soft: 90 100 64;        /* texto secundário */
+  --t1: 181 83 47;          /* destaque: terracota */
+  --t2: 154 69 39;          /* destaque ao passar o mouse */
+  --on-t1: 250 246 238;     /* texto sobre o destaque */
+  --ac: 160 72 38;          /* texto de destaque sobre cartões */
+  --ac-bg: 160 72 38;       /* texto de destaque pequeno direto no fundo */
+  --sec: 94 107 46;         /* botão secundário */
+  --hl: 63 74 31;           /* blocos invertidos (CTA) */
+  --on-hl: 250 246 238;
+  --hl-accent: 240 165 138;
+  --surface-a: .7;
+  --shadow-a: .22;
+  --glow-1: 240 165 138; --glow-1-a: .26;
+  --glow-2: 94 107 46;  --glow-2-a: .10;
+}
+:root[data-tone="dark"] {
+  --page: 94 107 46;        /* verde oliva da identidade */
+  --surface: 63 74 31;      /* cartões em verde musgo */
+  --panel: 52 61 25;
+  --ink: 250 246 238;
+  --soft: 244 238 224;
+  --t1: 240 165 138;        /* pêssego */
+  --t2: 250 246 238;
+  --on-t1: 63 74 31;
+  --ac: 240 165 138;
+  --ac-bg: 250 246 238;
+  --sec: 250 246 238;
+  --hl: 250 246 238;
+  --on-hl: 63 74 31;
+  --hl-accent: 181 83 47;
+  --surface-a: .62;
+  --shadow-a: .35;
+  --glow-1: 240 165 138; --glow-1-a: .14;
+  --glow-2: 63 74 31;   --glow-2-a: .5;
+}
+
 html { scroll-behavior: smooth; }
 body {
-  background: #1B2418; color: #F4F4F0;
+  background-color: rgb(var(--page)); color: rgb(var(--ink));
   font-family: "Plus Jakarta Sans", system-ui, sans-serif;
   background-image:
-    radial-gradient(60rem 40rem at 85% -10%, rgba(217,107,67,.18), transparent 60%),
-    radial-gradient(50rem 40rem at -10% 30%, rgba(96,108,56,.35), transparent 60%);
+    radial-gradient(55rem 38rem at 90% -10%, rgb(var(--glow-1) / var(--glow-1-a)), transparent 60%),
+    radial-gradient(50rem 40rem at -10% 35%, rgb(var(--glow-2) / var(--glow-2-a)), transparent 60%);
   background-attachment: fixed;
 }
 @layer components {
   .glass {
-    background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
-    backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
-    border: 1px solid rgba(244,244,240,.12);
+    background: rgb(var(--surface) / var(--surface-a));
+    border: 1px solid rgb(var(--ink) / .14);
+    box-shadow: 0 10px 30px -18px rgb(0 0 0 / var(--shadow-a));
   }
   .organic { border-radius: 46% 54% 42% 58% / 38% 40% 60% 62%; }
   .field {
-    @apply w-full rounded-2xl border border-ivory/15 bg-o1/60 px-4 py-3 text-ivory outline-none placeholder:text-[#7d866f] focus:border-t1 focus:ring-4 focus:ring-t1/25;
+    @apply w-full rounded-2xl border border-ink/20 bg-surface/70 px-4 py-3 text-ink outline-none placeholder:text-soft/60 focus:border-t1 focus:ring-4 focus:ring-t1/20;
   }
 }
