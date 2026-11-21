@@ -1,6 +1,7 @@
 import { Hourglass, Repeat, Shuffle, Lock, FileText, Wand2, ShieldCheck, Users, Video, MapPin, Bot, SearchCheck } from "lucide-react";
 
 // ===== PÁGINA WORKSHOPS E PALESTRAS: textos e valores ficam aqui. =====
+// 📌 MÍDIA: cada pacote tem o campo `midia` (veja src/components/Midia.jsx).
 
 export const DORES = [
   { icon: Hourglass, titulo: "Pede, recebe texto genérico e refaz tudo", texto: "A equipe usa o ChatGPT ou o Gemini como buscador, digita perguntas soltas e gasta mais tempo corrigindo do que ganhou." },
@@ -19,6 +20,7 @@ export const PACOTES_INTRO = "Valores por turma fechada da empresa, de até 20 p
 export const PACOTES = [
   {
     id: "palestra", nome: "Palestra de IA", duracao: "1h a 1h30", preco: "R$ 600",
+    midia: { src: "", legenda: "", ratio: "16/9" }, // 📌 MÍDIA deste formato
     para: "Eventos internos, semanas de inovação e convenções. Desperta o time para usar IA de forma prática e segura.",
     formato: "Online ao vivo ou presencial",
     itens: [
@@ -33,6 +35,7 @@ export const PACOTES = [
   },
   {
     id: "workshop", nome: "Workshop Prático", duracao: "2h30 a 3h", preco: "R$ 1.200", destaque: true, selo: "Mão na massa",
+    midia: { src: "", legenda: "", ratio: "16/9" }, // 📌 MÍDIA deste formato
     para: "Equipes que precisam sair da teoria e aplicar IA já nas entregas. Os participantes criam e ajustam comandos ao vivo comigo.",
     formato: "Online ao vivo ou presencial",
     itens: [
@@ -47,6 +50,7 @@ export const PACOTES = [
   },
   {
     id: "imersao", nome: "Imersão Aplicada", duracao: "4h em 2 encontros", preco: "R$ 1.800",
+    midia: { src: "", legenda: "", ratio: "16/9" }, // 📌 MÍDIA deste formato
     para: "Quem quer ir mais fundo: criar assistentes e fluxos da rotina real da equipe, em dois encontros de 2 horas.",
     formato: "Online ao vivo",
     itens: [

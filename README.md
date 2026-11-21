@@ -29,3 +29,15 @@ Envie a pasta `dist/` (ou conecte o repositório) para Netlify ou Vercel. Os arq
 | Menu e rodapé | `src/components/Header.jsx` e `Footer.jsx` |
 
 Dica: palavras em *itálico terracota* usam `<It>…</It>` e em **negrito** usam `<Bd>…</Bd>`.
+
+## Imagens e vídeos de prévia dos serviços
+
+Todo card de serviço ou pacote tem um espaço de mídia (`src/components/Midia.jsx`).
+1. Coloque o arquivo em `public/midia/` (imagem .jpg/.png/.webp ou vídeo .mp4/.webm), ou use um link do YouTube/Vimeo.
+2. No arquivo de dados da página, preencha `midia: { src: "/midia/arquivo.mp4", legenda: "...", ratio: "16/9" }`.
+   Procure por `📌 MÍDIA` nos arquivos para achar cada espaço.
+
+Arquivos de dados: `src/data/sites.js`, `identidade.js`, `pacotes.js`, `servicos.js` (Consultoria), `workshops.js`.
+
+## Páginas e tons de fundo
+Menu: `src/data/menu.js`. Tom de cada página (creme ou verde pastel): `src/utils/tema.js`. Cores: início de `src/index.css`.

@@ -4,6 +4,7 @@ import { Check, MessageCircle, ArrowRight } from "lucide-react";
 import { Btn, Bd, It, IconBox, Section } from "../components/ui.jsx";
 import { SERVICOS } from "../data/servicos.js";
 import { waLink } from "../utils/links.js";
+import Midia from "../components/Midia.jsx";
 
 export default function Consultoria() {
   return (
@@ -37,6 +38,9 @@ export default function Consultoria() {
                   {s.detalhes && <Link to={s.detalhes} className="inline-flex items-center gap-1 text-sm font-semibold text-ac hover:text-t2">Valores e o que está incluso<ArrowRight size={15} /></Link>}
                 </div>
               </div>
+
+              {/* 📌 ESPAÇO DE MÍDIA: preencha `midia` do serviço em src/data/servicos.js */}
+              <Midia midia={s.midia} className="mt-6" />
             </article>
           );
         })}

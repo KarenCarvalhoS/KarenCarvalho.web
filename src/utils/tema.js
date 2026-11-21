@@ -1,12 +1,14 @@
 import { useLocation } from "react-router-dom";
 
-// Tom de cada página: as páginas se alternam entre claras e escuras.
-// Para trocar, mude "light" por "dark" (e vice-versa). Lembre de ajustar também o script no index.html.
+// Tom de cada página: as páginas se alternam entre "light" (creme) e "green" (verde escuro da marca).
+// Para trocar, mude o valor. Lembre de ajustar também a lista de verdes no script do index.html.
 export const TONS = {
   "/": "light",
-  "/sites": "dark",
+  "/sites": "green",
+  "/identidade-visual": "light",
+  "/pacotes-digitais": "green",
   "/consultoria": "light",
-  "/palestras": "dark",
+  "/palestras": "green",
   "/sobre": "light",
 };
 

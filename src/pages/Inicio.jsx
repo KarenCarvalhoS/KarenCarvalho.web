@@ -1,14 +1,11 @@
 import React from 'react';
 import { ArrowRight, Store, Building2 } from "lucide-react";
 import { Btn, Bd, It, IconBox, Section } from "../components/ui.jsx";
-import logoTaglineClaro from "../assets/brand/logo-tagline.svg";
-import logoTaglineEscuro from "../assets/brand/logo-tagline-negativo.svg";
-import { useTone } from "../utils/tema.js";
+import logoTagline from "../assets/brand/logo-tagline.svg";
 import DiagnosticoForm from "../components/DiagnosticoForm.jsx";
 import { PILARES } from "../data/servicos.js";
 
 export default function Inicio() {
-  const logoTagline = useTone() === "dark" ? logoTaglineEscuro : logoTaglineClaro;
   const irParaFormulario = () => document.getElementById("diagnostico")?.scrollIntoView({ behavior: "smooth" });
 
   return (

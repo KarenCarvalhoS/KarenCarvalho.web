@@ -8,9 +8,9 @@
     <script>
       // Mesmo mapa de src/utils/tema.js: define o tom antes do site carregar
       (function () {
-        var escuras = ["/sites", "/palestras"];
+        var verdes = ["/sites", "/pacotes-digitais", "/palestras"];
         var p = location.pathname.replace(/\/+$/, "") || "/";
-        document.documentElement.dataset.tone = escuras.indexOf(p) > -1 ? "dark" : "light";
+        document.documentElement.dataset.tone = verdes.indexOf(p) > -1 ? "green" : "light";
       })();
     </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

@@ -3,6 +3,7 @@ import { Check, MessageCircle, Info, ArrowRight } from "lucide-react";
 import { Btn, Bd, It, IconBox, Section } from "../components/ui.jsx";
 import { DORES, APRENDE, PACOTES_INTRO, PACOTES, ADICIONAIS_INTRO, ADICIONAIS, PASSOS } from "../data/workshops.js";
 import { waLink } from "../utils/links.js";
+import Midia from "../components/Midia.jsx";
 
 const Eyebrow = ({ children }) => (
   <p className="font-mono text-xs font-semibold uppercase tracking-wider text-ac-bg">{children}</p>
@@ -105,6 +106,9 @@ export default function Palestras() {
                     <MessageCircle size={18} />Pedir proposta
                   </a>
                 </div>
+
+                {/* 📌 ESPAÇO DE MÍDIA: preencha `midia` do formato em src/data/workshops.js (PACOTES) */}
+                <Midia midia={p.midia} invert={d} className="mt-6" />
               </article>
             );
           })}

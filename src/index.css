@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* ===== TONS DA PÁGINA =====
-   Claro: creme + verde musgo. Escuro: verde oliva da identidade + creme.
+   Claro: creme. Verde: verde escuro da marca. Os dois usam os mesmos botões e detalhes.
    Valores em "R G B". Para mudar o creme ou o verde de fundo, edite --page. */
 :root {
   --page: 237 227 205;      /* creme (mais escuro que o original #FAF6EE) */
@@ -25,25 +25,24 @@
   --glow-1: 240 165 138; --glow-1-a: .26;
   --glow-2: 94 107 46;  --glow-2-a: .10;
 }
-:root[data-tone="dark"] {
-  --page: 94 107 46;        /* verde oliva da identidade */
-  --surface: 63 74 31;      /* cartões em verde musgo */
-  --panel: 52 61 25;
-  --ink: 250 246 238;
-  --soft: 244 238 224;
-  --t1: 240 165 138;        /* pêssego */
-  --t2: 250 246 238;
-  --on-t1: 63 74 31;
-  --ac: 240 165 138;
-  --ac-bg: 250 246 238;
-  --sec: 250 246 238;
-  --hl: 250 246 238;
-  --on-hl: 63 74 31;
-  --hl-accent: 181 83 47;
-  --surface-a: .62;
+/* Tom verde escuro (verde musgo da marca): fundo das páginas "verdes".
+   Os cartões e blocos internos usam o verde mais claro da paleta (oliva) para contraste suave. */
+:root[data-tone="green"] {
+  --page: 63 74 31;         /* verde musgo (fundo da página) */
+  --surface: 94 107 46;     /* cartões: verde oliva, mais claro que o fundo */
+  --panel: 106 120 56;      /* caixas internas dos cartões: ainda mais claras */
+  --ink: 250 246 238;       /* texto principal: creme */
+  --soft: 236 232 215;      /* texto secundário */
+  --ac: 255 222 200;        /* destaque sobre cartões (pêssego claro) */
+  --ac-bg: 240 165 138;     /* destaque direto no fundo (pêssego) */
+  --sec: 214 224 192;       /* botão secundário */
+  --hl: 94 107 46;          /* blocos de destaque (CTA): verde oliva */
+  --on-hl: 250 246 238;
+  --hl-accent: 250 200 175;
+  --surface-a: .9;
   --shadow-a: .35;
-  --glow-1: 240 165 138; --glow-1-a: .14;
-  --glow-2: 63 74 31;   --glow-2-a: .5;
+  --glow-1: 240 165 138; --glow-1-a: .10;
+  --glow-2: 94 107 46;  --glow-2-a: .35;
 }
 
 html { scroll-behavior: smooth; }

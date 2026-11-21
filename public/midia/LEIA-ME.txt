@@ -1,0 +1,16 @@
+PASTA DE MÍDIAS (imagens e vídeos de prévia)
+
+1. Coloque aqui as suas imagens (.jpg, .png, .webp) e vídeos (.mp4, .webm).
+   Dica: vídeos de gravação de tela em .mp4, de preferência com até 20 MB.
+2. No arquivo de dados da página, preencha o campo "src" do card:
+      midia: { src: "/midia/nome-do-arquivo.mp4", legenda: "Texto opcional", ratio: "16/9" }
+3. Se preferir, em vez de arquivo, cole o link do YouTube ou do Vimeo no "src".
+
+Arquivos de dados:
+  src/data/sites.js         (página Sites)
+  src/data/identidade.js    (página Identidade Visual)
+  src/data/pacotes.js       (página Pacotes Digitais)
+  src/data/servicos.js      (página Consultoria)
+  src/data/workshops.js     (página Workshops e Palestras)
+
+O componente que desenha o espaço está em src/components/Midia.jsx (tem as instruções completas).

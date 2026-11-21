@@ -23,6 +23,13 @@ export function Btn({ to, href, onClick, variant = "primary", children }) {
 }
 
 // Caixinha de ícone terracota usada nos cards
-export const IconBox = ({ icon: Icon }) => (
-  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-t1/15 text-ac-bg"><Icon size={22} /></span>
+// `invert` = use dentro de cards escuros/destacados.
+export const IconBox = ({ icon: Icon, invert = false }) => (
+  <span className={`grid h-12 w-12 shrink-0 place-items-center rounded-2xl ${invert ? "bg-hl-accent/20 text-hl-accent" : "bg-t1/15 text-ac-bg"}`}><Icon size={22} /></span>
 );
+
+// Item de lista didático: "Nome | explicação prática" (nome em negrito, explicação logo depois)
+export const Item = ({ texto }) => {
+  const [t, d] = texto.split(" | ");
+  return <span>{d ? <><strong className="font-semibold">{t}:</strong> <span className="text-soft">{d}</span></> : t}</span>;
+};
